@@ -21,7 +21,7 @@
 
 {% macro header_items(current_user) %}
     {% set endpoints = [
-      ('main.index', config.APP_NAME, 'home'),
+      ('main.index', 'Home', 'home'),
       ('main.about', 'About', 'info')
     ]%}
     {% set user = [] %}
@@ -83,8 +83,13 @@
 
 {% macro desktop_nav(current_user, dropdown=None) %}
     <div class="computer tablet only row">
-        <div class="ui fixed inverted black main menu">
+        <div class="ui fixed green large inverted main menu">
+          <a class=" item">
+            <i class="leaf icon"></i>
+            Krishi Sampark
+          </a>
             <div class="ui container">
+              
                 {{ header_items(current_user) }}
                 {{ create_dropdown(dropdown) }}
                 <div class="right menu">

@@ -20,7 +20,7 @@ if os.path.exists('config.env'):
 
 
 class Config:
-    APP_NAME = os.environ.get('APP_NAME', 'Flask-Base')
+    APP_NAME = os.environ.get('APP_NAME', 'Krishi Sampark')
     if os.environ.get('SECRET_KEY'):
         SECRET_KEY = os.environ.get('SECRET_KEY')
     else:
@@ -29,7 +29,7 @@ class Config:
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
 
     # Email
-    MAIL_SERVER = os.environ.get('MAIL_SERVER', 'smtp.sendgrid.net')
+    MAIL_SERVER = os.environ.get('MAIL_SERVER', 'smtp.gmail.com')
     MAIL_PORT = os.environ.get('MAIL_PORT', 587)
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS', True)
     MAIL_USE_SSL = os.environ.get('MAIL_USE_SSL', False)
